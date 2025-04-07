@@ -25,7 +25,13 @@ function HabitList({ habits, onToggle, onDelete }) {
                 >
                   {habit.name}
                 </span>
+
+                {/* 🔥 Show Streak Counter */}
+                <span className="text-sm text-indigo-500 ml-2">
+                  🔥 {habit.streak} day{habit.streak !== 1 ? "s" : ""}
+                </span>
               </div>
+
               <button
                 onClick={() => onDelete(index)}
                 className="text-red-500 hover:text-red-700 text-sm"
